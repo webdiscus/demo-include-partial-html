@@ -3,7 +3,8 @@ const webpack = require("webpack");
 const HtmlBundlerPlugin = require("html-bundler-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
-module.exports = ({ mode }) => {
+module.exports = (env, argv) => {
+  const { mode } = argv;
   const isProduction = mode === 'production';
 
   return {
